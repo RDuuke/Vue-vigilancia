@@ -1,4 +1,9 @@
 const hepatitis = {
+    beforeRouteEnter (to, from, next) {
+        next(vm => {
+            vm.$root.interna = true
+        })
+    },
     template: `
     <div>
         <div class="rd-container">
@@ -9,16 +14,17 @@ const hepatitis = {
                 <img src="images/i-hepatitis.png" alt="">
             </div>
             <div class="rd-element rd-s-100 rd-l-50 t-center">
-                <a href="">
+                <a href="pdfs/PROTOCOLO Hepatitis B C y delta-ins 2017.pdf" download="Protocolo Hepatitis">
                     <img src="images/btn-protocolo.png" alt="">
                 </a>
             </div>
             <div class="rd-element rd-s-100 rd-l-50 t-center">
-                <a href="">
+                <a href="pdfs/FICHA notificacion Hepatitis-2019.pdf" download="Ficha Hepatitis">
                     <img src="images/btn-ficha.png" alt="">
                 </a>
             </div>
         </div>
+        <div class="separator"></div>
         <div class="bg-red">
             <div class="rd-container">
                 <div class="rd-element rd-s-100 rd-l-80 center t-center">
@@ -29,21 +35,25 @@ const hepatitis = {
                 </div>
             </div>
         </div>
+        <div class="separator"></div>
         <div class="rd-container">
             <div class="rd-element rd-s-100">
                 <h1 class="t-center color-yellow">
                     Caso<br>Confirmado<br>por Laboratorio
                 </h1>   
             </div>
-            <div class="rd-element rd-s-100 t-center">
+            <div class="separator"></div>
+            <div class="rd-element rd-s-100 t-center from-l">
                 <img src="images/F1.png" alt="">
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 rd-l-50 center t-center">
                 <p><b class="color-red">Caso de Hepatitis B a clasificar.</b></p>
             </div>
-            <div class="rd-element rd-s-100 t-center">
+            <div class="rd-element rd-s-100 t-center from-l">
                 <img src="images/F1.png" alt="">
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 t-justify">
                 <p>
                     Paciente con <b>nueve meses o más</b> de vida que posea una prueba para detección en sangre o tejido de antígeno de superficie 
@@ -55,12 +65,15 @@ const hepatitis = {
                     definiendo si presenta una infección de tipo aguda o crónica.
                 </p>
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 rd-l-50 center t-center">
                 <p><b class="color-red">Caso de Hepatitis B Aguda.</b></p>
             </div>
-            <div class="rd-element rd-s-100 t-center">
+            <div class="separator"></div>
+            <div class="rd-element rd-s-100 t-center from-l">
                 <img src="images/F1.png" alt="">
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 t-justify">
                 <p>
                     Paciente con nueve meses o más de vida que posea una prueba para detección de antígeno de superficie (HBsAg)
@@ -69,9 +82,11 @@ const hepatitis = {
                     positiva/reactiva y que cumple por lo menos con uno de los siguientes criterios:
                 </p>
             </div>
-            <div class="rd-element rd-s-100 t-center">
+            <div class="separator"></div>
+            <div class="rd-element rd-s-100 t-center from-l">
                 <img src="images/F2.png" alt="">
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 rd-l-50">
                 <p>
                    Malestar general, dolores musculares, articulares, astenia, hiporexia, náusea, vómito, coluria.
@@ -82,24 +97,30 @@ const hepatitis = {
                     Ictericia o elevación de enzimas hepáticas (alanina-aminotransferasas) a más de 2,5 veces el valor normal
                 </p>
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 rd-l-50 center t-center">
                 <p><b class="color-red">Caso de Hepatitis B Aguda.</b></p>
             </div>
-            <div class="rd-element rd-s-100 t-center">
+            <div class="separator"></div>
+            <div class="rd-element rd-s-100 t-center from-l">
                 <img src="images/F2.png" alt="">
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 t-justify">
                 <p>
                     Paciente que cumpla con algunas de las definiciones de caso para Hepatitis B ya descritas y que adicionalmente 
                     presente una prueba para detección de anticuerpos contra el antígeno Delta <b>(Anti-VHD)</b> positiva/reactiva en sangre o tejido
                 </p>
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 rd-l-50 center t-center">
                 <p><b class="color-red">Caso de Hepatitis C.</b></p>
             </div>
-            <div class="rd-element rd-s-100 t-center">
+            <div class="separator"></div>
+            <div class="rd-element rd-s-100 t-center from-l">
                 <img src="images/F2.png" alt="">
             </div>
+            <div class="separator"></div>
              <div class="rd-element rd-s-100 t-justify">
                 <p>
                     Paciente que presente una prueba de (EIA, CLIA) para detección de anticuerpos totales contra el VHC (Anti-VHC) 
@@ -107,7 +128,8 @@ const hepatitis = {
                     siguientes pruebas para de detección específica para el VHC:
                 </p>
             </div>
-            <div class="rd-element rd-s-100 t-center">
+            <div class="separator"></div>
+            <div class="rd-element rd-s-100 t-center from-l">
                 <img src="images/F5.png" alt="">
             </div>
             <div class="rd-element rd-s-100 rd-l-40 t-center">
@@ -131,12 +153,15 @@ const hepatitis = {
                     </b>                
                 </p>
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 t-center">
                 <p><b>Puede o no cumplir por lo menos con uno de los siguientes criterios:</b></p>
             </div>
-            <div class="rd-element rd-s-100 t-center">
+            <div class="separator"></div>
+            <div class="rd-element rd-s-100 t-center from-l">
                 <img src="images/F2.png" alt="">
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 rd-l-50">
                 <p>
                     Malestar general, dolores musculares, articulares, astenia, hiporexia, náusea, vómito, coluria
@@ -147,6 +172,7 @@ const hepatitis = {
                     Ictericia o elevación de alanino-aminotransferasas a más de 2,5 veces el valor normal.
                 </p>
             </div>
+            <div class="separator"></div>
         </div>
     </div>
     `

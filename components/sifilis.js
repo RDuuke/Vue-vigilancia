@@ -1,4 +1,9 @@
 const sifilis = {
+    beforeRouteEnter (to, from, next) {
+       next(vm => {
+           vm.$root.interna = true
+       })
+    },
     template: `
     <div>
         <div class="rd-container">
@@ -9,12 +14,12 @@ const sifilis = {
                 <img src="images/i-sifilis.png" alt="">
             </div>
             <div class="rd-element rd-s-100 rd-l-50 t-center">
-                <a href="">
+                <a href="pdfs/PROTOCOLO Sifilis gestacional y congenita-INS 2017.pdf" download="Protocolo Sífilis Gestacional y Congénita">
                     <img src="images/btn-protocolo.png" alt="">
                 </a>
             </div>
             <div class="rd-element rd-s-100 rd-l-50 t-center">
-                <a href="">
+                <a href="pdfs/FICHA notificacion sifilis gestacional y congenita-2019.pdf" download="Ficha Sífilis Gestacional y Congénita">
                     <img src="images/btn-ficha.png" alt="">
                 </a>
             </div>
@@ -35,13 +40,15 @@ const sifilis = {
                     Caso confirmado<br>de sífilis gestacional
                 </h1>   
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 rd-l-80 center t-justify">
                 <p>Toda mujer gestante, puérpera o con aborto en los últimos 40 días con o sin signos clínicos sugestivos de sífilis 
                 (comopor ejemplo: úlcera genital, erupción cutánea, placas en palmas y plantas), con prueba treponémica rápida positiva 
                 acompañada de una prueba no treponémica reactiva (VDRL, RPR) a cualquier dilución, que no ha recibido tratamiento 
                 adecuado para sífilis durante la presente gestación o que tiene una reinfección no tratada*.</p>
             </div>
-            <div class="rd-element rd-s-100 t-center">
+            <div class="separator"></div>
+            <div class="rd-element rd-s-100 t-center from-l">
                 <img src="/images/F1.png" alt="">
             </div>
         </div>
@@ -55,10 +62,12 @@ const sifilis = {
                 </div>
             </div>
         </div>
+        <div class="separator"></div>
         <div class="rd-container">
-            <div class="rd-element rd-s-100 t-center">
+            <div class="rd-element rd-s-100 t-center from-l">
                 <img src="images/F2.png" alt="">
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 rd-l-50">
                 <p>
                     <b class="color-red">Gestante o mujer en puerperio</b> (40 días postparto) que después de haber recibido tratamiento adecuado para 
@@ -76,12 +85,15 @@ const sifilis = {
                     treponémica no descienda cuatro veces o dos diluciones.
                 </p>
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 rd-l-30 center">
                 <h1 class="color-yellow t-center">Caso confirmado<br>de sífilis gestacional</h1>
             </div>
-            <div class="rd-element rd-s-100 t-center">
+            <div class="separator"></div>
+            <div class="rd-element rd-s-100 t-center from-l">
                 <img src="images/F3.png" alt="">
             </div>
+            <div class="separator"></div>
             <div class="rd-element rd-s-100 rd-l-25">
                 <p>
                     <b class="color-red">Nexo epidemiológico:</b> fruto de la gestación (mortinato o nacido vivo) de madre con <b>sífilis gestacional</b> sin tratamiento

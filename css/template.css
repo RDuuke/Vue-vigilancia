@@ -12,8 +12,8 @@
     color: var(--fuente);
     padding: 0;
     margin: 0;
-    font-size: 12px;
-    line-height: 28px;
+    font-size: 22px;
+    line-height: 38px;
 }
 header {
     background-color: var(--gren);
@@ -21,12 +21,29 @@ header {
 ul {
     list-style: none;
 }
-#menu {
+h1 {
+    font-size: 36px;
+}
 
+#menu {
+    flex-direction: column;
 }
 #menu > li {
     flex: auto;
     text-align: center;
+    line-height: 28px;
+    margin-bottom: 1em;
+}
+#menu > li > a {
+    font-size: 17px;
+    line-height: 17px;
+}
+#menu >li > a > img {
+    width: 40px;
+    height: 40px;
+}
+#menu > li > a > br {
+    line-height: 17px;
 }
 .bg-red {
     background-color: var(--red);
@@ -56,6 +73,57 @@ ul {
 .bg-blue{
     padding: 1em 0;
 }
-h1 {
-    font-size: 26px;
+.bg-red, .bg-yellow {
+    margin-bottom: 1em;
+}
+
+#home_header > .rd-container {
+    height: 100%;
+}
+#home_header > .rd-container > .rd-element {
+    height: 100%;
+}
+.cotent-img {
+    height: 100%;
+}
+.separator {
+    display: block;
+    width: 100%;
+    height: 1em;
+}
+@media screen and (min-width: 1023px) {
+    #menu {
+        flex-direction: row;
+    }
+    #menu > li {
+        margin-bottom: 0;
+    }
+    #menu >li > a > img {
+        width: 30px;
+        height: 30px;
+    }
+    .cotent-img img:first-child {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 228px;
+    }
+    .cotent-img img:nth-child(2) {
+        position: absolute;
+        margin: 0 auto;
+        right: 0;
+        left: 0;
+        top: 20%;
+        width: 430px;
+        bottom: 0;
+    }
+    .cotent-img img:last-child {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+    #home_header {
+        height: 310px;
+    }
+
 }

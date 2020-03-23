@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Vigilancia en Salud Pública</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/grid.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700,700i&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/template.css">
@@ -11,15 +12,15 @@
 </head>
 <body>
 <div id="app">
-    <header>
-        <div class="rd-container-row rd-element-align-center" v-show="interna">
-            <div class="rd-element rd-s-100 rd-l-20">
+    <header id="home_interna" v-show="interna">
+        <div class="rd-container-row rd-element-align-center">
+            <div class="rd-element rd-s-100 rd-l-20 t-center rd-element-justify-center">
                 <img src="images/logo.png" alt="">
             </div>
             <div class="rd-element rd-s-100 rd-l-50">
                 <ul id="menu" class="flex rd-element-align-center">
                     <li>
-                        <router-link to="/" @click="interna=false">
+                        <router-link to="/" @click.native="hideHeader">
                             <img src="images/HOME.png" alt="">
                         </router-link>
                     </li>
@@ -28,32 +29,40 @@
                             y Congénita</router-link>
                     </li>
                     <li>
-                        <router-link to="/vih" @click="interna=true">VIH/SIDA</router-link>
+                        <router-link to="/vih" @click.native="showHeader">VIH/SIDA</router-link>
                     </li>
                     <li>
-                        <router-link to="/hepatitis" @click="interna=true">Hepatitis B, C y<br>
+                        <router-link to="/hepatitis" @click.native="showHeader">Hepatitis B, C y<br>
                             Coinfección/Superinfección<br>
                             Hepatitis B-delt</router-link>
                     </li>
                 </ul>
             </div>
-            <div class="rd-element rd-s-100 rd-l-30">
+            <div class="rd-element rd-s-100 rd-l-30 t-center">
                 <img src="images/titulo.png" alt="">
             </div>
         </div>
-        <div class="rd-container" v-show="interna != true">
-            <div class="rd-element rd-s-100">
-                <h1>Header</h1>
+    </header>
+    <header id="home_header" v-show="interna != true">
+        <div class="rd-container">
+            <div class="rd-element rd-s-100 rd-l-30 rd-element-align-center flex rd-element-justify-center">
+                <img src="images/logo.png" alt="" width="309" height="116">
+            </div>
+            <div class="rd-element rd-s-100 rd-l-70 flex rd-element-row p-relative cotent-img">
+                <img src="images/m1.png" class="from-l" alt="">
+                <img src="images/titulo.png" alt="">
+                <img src="images/m2.png" class="from-l" alt="">
             </div>
         </div>
     </header>
     <section>
         <router-view></router-view>
     </section>
+    <go-top bg-color="#3066B0" fg-color="#F7C77D" :size="50" weight="bold" box-shadow="rgb(48, 102, 176, .4) 0 7px 8px"></go-top>
     <footer class="bg-blue">
         <div class="rd-container">
-            <div class="rd-element rd-s-100 t-right ">
-                <img src="images/logo.png" alt="">
+            <div class="rd-element rd-s-100 t-right">
+                <img src="images/logo.png" alt="" width="309" height="116">
             </div>
         </div>
     </footer>
@@ -62,6 +71,7 @@
 <script src="components/sifilis.js"></script>
 <script src="components/vih.js"></script>
 <script src="components/hepatitis.js"></script>
+<script src="js/vue-go-top.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
