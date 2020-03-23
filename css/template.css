@@ -1,0 +1,61 @@
+:root{
+    --gren : #C2DFC3;
+    --red : #8E2747;
+    --blue : #163342;
+    --yellow : #F7C77D;
+    --fuente : #4D4D4D;
+
+}
+
+* {
+    font-family: 'Raleway', sans-serif;
+    color: var(--fuente);
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    line-height: 28px;
+}
+header {
+    background-color: var(--gren);
+}
+ul {
+    list-style: none;
+}
+#menu {
+
+}
+#menu > li {
+    flex: auto;
+    text-align: center;
+}
+.bg-red {
+    background-color: var(--red);
+}
+.bg-yellow {
+    background-color: var(--yellow);
+}
+.bg-green {
+    background-color: var(--gren);
+}
+.bg-blue {
+    background-color: var(--blue);
+}
+.color-yellow {
+    color: var(--yellow);
+}
+.color-red {
+    color: var(--red);
+}
+.bg-red p {
+    font-style: italic;
+    color: var(--yellow);
+}
+.bg-yellow,
+.bg-red,
+.bg-green,
+.bg-blue{
+    padding: 1em 0;
+}
+h1 {
+    font-size: 26px;
+}
